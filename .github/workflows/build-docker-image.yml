@@ -21,11 +21,6 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     
-    - name: Build & Publish PHP 8.1 Buster
-      run: sh build.sh php81-buster -p
-      
-    - name: Build & Publish PHP 8.1 Buster Puppeteer
-      run: sh build.sh php81-buster-puppeteer -p
+    - name: Build & Publish
+      run: sh build.sh php81 -p
 
-    - name: Build & Publish PHP 8.1 Buster Libre Office
-      run: sh build.sh php81-buster-libreoffice -p
